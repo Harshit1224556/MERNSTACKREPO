@@ -13,3 +13,14 @@
 
 //ans undefined 
 
+//but it different in cases like let and const
+// console.log(a)
+// let a = 10
+
+//variable declare se phle wale space tk ko hum bolte hah temporal red zone 
+
+
+
+//global scope har jagah valid 
+//function scope inside function 
+//block scope har jagah scope hah hamaraaaa

@@ -12,6 +12,18 @@
 
 
 
+// console.log(null + 1);//1
+// console.log("5" + 3);//53
+// console.log("5" - 3);//2
+// console.log(true + false);//1
 
 
+// console.log(typeof []);//object
+// console.log(typeof null);//object
+// console.log(typeof 123n);//bigint
 
+
+console.log("10" + 1);
+console.log("10" - 1);
+console.log(true + false);
+console.log(!!"Sheryians");

@@ -4,3 +4,24 @@
 
 
 
+// for(let i=1;i<=20;i++){
+//     if(i%2==0){
+//         console.log(i);
+//     }
+// }
+
+//reverse a string in javascript
+
+// let name = "harshit";
+// let arr = name.split("");
+
+// let  s = 0;
+// let e = name.length-1;
+// while(s<=e){
+//     [arr[s],arr[e]]=[arr[e],arr[s]]
+//     s++;
+//     e--;
+// }
+// let result  = arr.join("");
+// console.log(result)
+

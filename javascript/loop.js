@@ -25,3 +25,14 @@
 // let result  = arr.join("");
 // console.log(result)
 
+
+
+// let nums = [10,20,30,40]
+// let  s = 0;
+// nums.forEach((num) =>{
+//     s = s+num;
+// });
+// console.log(s)
+
+
+//

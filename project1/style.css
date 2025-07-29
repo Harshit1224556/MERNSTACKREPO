@@ -112,4 +112,27 @@ button{
     height: 10%;
     /* background-color: antiquewhite; */
     margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#footer{
+    padding-left: 10px;
+    color:white;
+    animation-name: sale;
+    animation-duration: 40s;
+    animation-timing-function: ease-in-out;
+   
+}
+@keyframes sale {
+    0%{
+         padding-left: 10px;
+    color:red;
+    }
+    50%{
+        padding-left: 1000px;
+        color:blue;
+    }
+    100%{
+         padding-left: auto;
+        color:yellow;
+    }
 }

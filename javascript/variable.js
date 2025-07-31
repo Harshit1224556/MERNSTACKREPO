@@ -24,3 +24,8 @@
 //global scope har jagah valid 
 //function scope inside function 
 //block scope har jagah scope hah hamaraaaa
+
+
+
+let a = "harsit"
+console.log(a+1)

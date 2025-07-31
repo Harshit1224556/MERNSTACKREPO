@@ -8,5 +8,9 @@
 //null ke saath jb hum comparison krte hah to jb kbhi wo 0 m change  kr deta 
 // aur jb kbhi Nan me
 
-console.log("2"==2)//dataype check nh krta
-console.log("2"===2)//datatype bh check krta hah isme
+// console.log("2"==2)//dataype check nh krta
+// console.log("2"===2)//datatype bh check krta hah isme
+
+// const id  = Symbol('123')
+// const anid = Symbol('123')
+// console.log(id===anid)

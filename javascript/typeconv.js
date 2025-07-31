@@ -14,10 +14,17 @@ let bb = Number(b)
 
 let isLog  = 20
 let isLogBB = Boolean(isLog)
-console.log(isLogBB)
+// console.log(isLogBB)
 
 //20 -true
 //1 - true
 //0 - flase
 // " " - false
 //"hitesh" - false
+
+
+let num = 10
+let snum  = String(num)
+console.log(snum)
+console.log(typeof snum)
+

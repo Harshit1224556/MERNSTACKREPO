@@ -14,3 +14,15 @@
 // const id  = Symbol('123')
 // const anid = Symbol('123')
 // console.log(id===anid)
+
+
+const obj = {
+    name:"harshit",
+    age:18
+};
+console.log(obj)
+
+let myfun = function(){
+    console.log("my name is khan");
+}
+myfun();

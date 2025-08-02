@@ -27,3 +27,4 @@ let newdate = new Date("2023-01-23")
 // console.log(nwdate.getMonth()+1)
 // console.log(nwdate.getDay())
 
+

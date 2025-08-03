@@ -72,3 +72,5 @@ const obj3 = {...obj1,...obj2}
 console.log(Object.keys(jsuser))
 console.log(Object.values(jsuser))
 console.log(jsuser.hasOwnProperty('name'))
+
+

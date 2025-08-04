@@ -40,3 +40,25 @@ function saymyname(){
 // }
 // const  result = islogged("Harshit")
 // console.log(result)
+
+// function addtocart(...num){
+//     return num;
+// }
+// console.log(addtocart(100,200,300,400))
+
+
+const user = {
+    username:"Harshit",
+    price:1900
+}
+
+function handleobject(anyobj){
+    console.log(`this is my ${anyobj.username} id`)
+}
+handleobject(user)
+
+const newarr = [100,200,300,400,500]
+function getelement(arr){
+    return arr[0]
+}
+console.log(getelement(newarr))

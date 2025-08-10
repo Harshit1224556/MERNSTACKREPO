@@ -6,11 +6,11 @@
 //lets make a try by doing this
 
 
-// let name1 = "Harshit"
-// let name2 = name1
-// name2 = "Sharma"
-// console.log(name1)
-// console.log(name2)
+let name1 = "Harshit"
+let name2 = name1
+name2 = "Sharma"
+console.log(name1)
+console.log(name2)
 
 //copy gaya original m change nh hua  
 

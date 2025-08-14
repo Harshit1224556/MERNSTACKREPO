@@ -18,3 +18,7 @@ const user = {
 //ho nh hah to
 //lekin browser me wo window return kr degaaaaa
 
+// function chai(){
+//     console.log(this)
+// }
+// chai()

@@ -30,10 +30,43 @@ const books = [
 
 //map
 
-const arr = [1,2,3,4,5,6,7,8,9,10]
+// const arr = [1,2,3,4,5,6,7,8,9,10]
 
 // const newarr = arr.map( (num)=> (num+10))
 // console.log(newarr)
 
-const newarr = arr.map( (num)=>(num*10)) .map(( num) => (num+1))
-console.log(newarr)
+// const newarr = arr.map( (num)=>(num*10)) .map(( num) => (num+1))
+// console.log(newarr)
+
+
+//reduceeee
+
+//mostly used in to find the sum 
+//practical use to find total price  in  shopping cart
+
+
+// const arr = [1,2,3]
+
+// const newarr = arr.reduce( (acc,item) => acc + item,0)
+// console.log(newarr)
+
+
+const shoppingcart = [
+  {
+    item:"speaker",
+    price:10000
+  },
+  {
+    item:"protein",
+    price:30000
+  },
+  {
+    item:"Sofa",
+    price:80000
+  }
+
+]
+
+const total = shoppingcart.reduce( (acc,item) => acc  + item.price,0)
+
+console.log(total)

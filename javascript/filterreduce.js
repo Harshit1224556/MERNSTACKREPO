@@ -22,8 +22,18 @@ const books = [
 //   console.log(hisbook)
 
 
-let  pubaf = books.filter(   (br) => (br.publish>=2000))
+// let  pubaf = books.filter(   (br) => (br.publish>=2000))
+// // console.log(pubaf)
+
+// pubaf = books.filter( (br) => (br.publish>=1995 && br.genre==='History'))
 // console.log(pubaf)
 
-pubaf = books.filter( (br) => (br.publish>=1995 && br.genre==='History'))
-console.log(pubaf)
+//map
+
+const arr = [1,2,3,4,5,6,7,8,9,10]
+
+// const newarr = arr.map( (num)=> (num+10))
+// console.log(newarr)
+
+const newarr = arr.map( (num)=>(num*10)) .map(( num) => (num+1))
+console.log(newarr)

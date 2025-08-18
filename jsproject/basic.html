@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            width: 100px;
+            height: 40px;
+            background-color: aqua;
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    
+
+        <button onclick="changecolor()" id ="primary">Click me </button>
+  
+</body>
+
+<script>
+
+    let i= 0;
+    function changecolor(){
+        let colors = ["red","green","yellow","black"]
+        document.getElementById("primary").style.backgroundColor = colors[i]
+        document.body.style.backgroundColor=colors[i]
+        i++
+        if(i>colors.length-1) i =0
+    }
+
+    
+
+</script>
+</html>

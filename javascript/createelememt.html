@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to create new element</title>
+</head>
+<body style="background-color: black; color: white;">
+    
+
+
+
+</body>
+
+
+<script>
+
+const div = document.createElement('div')
+console.log(div)
+div.id = "heading"
+div.class = "title"
+div.style.backgroundColor="red"
+// div.innerText ="my name is harshit sharma "
+
+//this is not a optimal way the optimal way to create 
+//element is text nodeeee
+
+const addtext = document.createTextNode("chai and biscut")
+div.appendChild(addtext)
+document.body.appendChild(div)
+
+//this is the way to append div in to bodyyy
+
+</script>
+</html>

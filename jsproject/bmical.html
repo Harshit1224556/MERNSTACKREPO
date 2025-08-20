@@ -23,6 +23,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
+      
     }
 
 
@@ -34,7 +35,7 @@ body{
         text-align: center;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
-
+  border-radius: 50px;
     }
 
 
@@ -46,8 +47,44 @@ body{
 
 <h1>BMI CALCULATOR</h1>
 
+<form>
+   
+<label for="weg">Enter the weight: </label>
+    <input type="number" style = "width: 150px; height: 30px; margin-top: 60px;" id = "weg">
+    <br>
+    <label for="heg">Enter the height: </label>
+    <input type="number" style = "width: 150px; height: 30px; margin-top: 40px;" id = "heg"
+    >
+
+  
+
+</form>
+
+<button style = "width: 100px; height: 30px; background-color:yellow; border-radius: 10px; margin-top: 30px; cursor:pointer" id = "button">Calculate</button>
+ <br>
+  <input type="text" readonly style = "margin-top: 20px; width: 200px; height: 30px; color:black" id = "display">
     </div>
 
 
 </body>
+
+<script>
+
+
+const weight = document.getElementById('weg')
+const height = document.getElementById('heg')
+const display = document.getElementById('display')
+const button = document.getElementById('button')
+
+
+
+button.addEventListener("click",() =>{
+    const bmi = (weight.value)/(height.value*height.value)
+      if(weight.value && height.value)
+   display.value = "BMI: "  + bmi;
+else
+display.value = "Please fill all the field"
+});
+
+</script>
 </html>

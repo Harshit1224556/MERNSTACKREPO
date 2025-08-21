@@ -91,28 +91,34 @@
 
 <script>
 
-const input  = document.querySelector('input')
+
+const input = document.querySelector('input')
+
+const ul = document.querySelector('ul')
 
 const addbtn = document.getElementById('add')
-const list   = document.querySelector('ul');
 
-addbtn.addEventListener("click", ()=>{
-    const task = input.value.trim()
-      if(task === "") return
-      const li = document.createElement('li');
+addbtn.addEventListener("click",()=>{
+  
 
-      li.innerHTML = `
-        ${task} <button class="delete-btn">X</button>
-    `
-       li.querySelector('.delete-btn').addEventListener("click", () => {
-        li.remove();
-    });
+  const li = document.createElement('li')
+
+const task = input.value.trim()
+
+li.innerHTML = `${task} <button class = "delete-btn">X</button> `
+ul.appendChild(li)
 
 
-     list.appendChild(li)
-     input.value = ""
+const del = document.querySelector('.delete-btn')
+
+del.addEventListener("click",  ()=>{
+
+   li.remove()
+
+})
+input.value = ""
+
 });
-
 
 
 

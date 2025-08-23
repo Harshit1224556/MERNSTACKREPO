@@ -1,0 +1,24 @@
+{
+  "name": "reactjs",
+  "version": "1.0.0",
+  "description": "this is my reactjsrepo",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harshit1224556/Projects.git"
+  },
+  "keywords": [
+    "react",
+    "learn",
+    "react"
+  ],
+  "author": "Harshit Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harshit1224556/Projects/issues"
+  },
+  "homepage": "https://github.com/Harshit1224556/Projects#readme"
+}

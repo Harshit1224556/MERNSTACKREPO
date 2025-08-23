@@ -2,7 +2,7 @@
   "name": "reactjs",
   "version": "1.0.0",
   "description": "this is my reactjsrepo",
-  "main": "app.js",
+  
   "scripts": {
     "test": "jest"
   },
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Harshit1224556/Projects/issues"
   },
-  "homepage": "https://github.com/Harshit1224556/Projects#readme"
+  "homepage": "https://github.com/Harshit1224556/Projects#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
 }

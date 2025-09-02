@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>My name is harshit Sharma</h1>
+<button id="stop">Stop</button>
+
+
+</body>
+
+<script>
+    setTimeout(()=>{
+       
+        console.log("i am a student")
+    },2000)
+
+    const changetext = function(){
+        document.querySelector('h1').innerHTML = "i am from Bihar"
+    }
+  
+   const changeme  =  setTimeout(changetext,3000)
+  
+    //set timeout ky krta hah ki appka kam ek baar kr dega bs after sometines jo aapne set kra hah 
+
+    //set timeout me hum function ke jagah hum reference dete hah 
+
+    //ek hota hah clear timout jo timeout se bachata hah so us,e humko timeout ka reference dena hota hah
+document.querySelector('#stop').addEventListener("click",()=>{
+
+    clearTimeout(changeme)
+})
+
+</script>
+</html>

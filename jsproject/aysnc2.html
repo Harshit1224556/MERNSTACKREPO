@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>My name is harshit Sharma</h1>
+<button id="stop">Stop</button>
+<button id="start">Start</button>
+
+
+</body>
+
+<script>
+let pritndate;
+    //set interval us interval ke baad aapka us time wo kaam krte hi jayega krte hi jayegaa
+  document.querySelector("#start").addEventListener("click",()=>{
+     pritndate  =  setInterval(()=>{
+     console.log("Harshit",Date.now())
+    
+    },1000)
+   
+  }) 
+//we can also one more paramter in setInteval as it is paramert which 
+//we passed in fuction 
+    //agar hum isko rokna chahte to humme clearInterval use krna pdega
+
+document.querySelector("#stop").addEventListener(("click"),()=>{
+    clearInterval(pritndate)
+})
+
+//here we want that we want when we press the start buttton date start printing and when we press stop
+    
+
+</script>
+</html>

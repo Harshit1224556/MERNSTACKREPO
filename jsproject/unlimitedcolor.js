@@ -14,5 +14,6 @@ document.querySelector('#start').addEventListener("click",()=>{
 })
 
 document.querySelector("#stop").addEventListener("click",()=>{
-     clearTimeout(changecolor)
+    clearInterval(changecolor);
+  changecolor = null;
 })

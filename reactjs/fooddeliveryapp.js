@@ -21,14 +21,39 @@ const Header = () => (
 </div>
 )
  
-    
+const Restrocard = () =>(
 
+<div id = "rescard">
+<img src = "https://i.pinimg.com/736x/48/2a/57/482a5709b40093d1d5ffc035a5386f5e.jpg" id = "food"></img>
+<h1 id = "resname">Italian Restaurant </h1>
+<h4 id = "ratandtime">4.4 . 40-50 mins</h4>
+<p>Pizzas</p>
+<p>North_Jalandhar</p>
+</div>
+
+)
+
+
+    
+const Body = ()=>(
+  
+<div id = "body">
+  <div id = "search">Search</div>
+  <div id = "restrauntcard">
+    <Restrocard />
+  </div>
+
+</div>
+
+
+)
 
 
 const Applayout = () => (
  
 <div className="app">
 <Header/>
+<Body/>
 
 </div>
 

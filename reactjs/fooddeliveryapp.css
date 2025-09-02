@@ -25,3 +25,37 @@ html,body{
     display: flex;
     gap:20px;
 }
+
+#rescard{
+    width:300px;
+    height: 300px;
+    background-color: #D3D3D3;
+    border-radius: 35px;
+  
+}
+#food{
+
+    width: 300px;
+    height: 200px;
+    /* border-radius: 10px; */
+   
+    
+}
+
+#resname{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:25px;
+}
+
+#ratandtime{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    
+
+}
+
+p{
+        font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+
+}

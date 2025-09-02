@@ -2,17 +2,37 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 
-const Header = () => {
+const Header = () => (
+  <div className="Header">
+    <div className="logo-container">
+        <img src = "data:image/png;base64,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" className="logo" />
+    </div>
+ 
+
+ <div className="nav-items">
+<ul className = "listitem">
+
+<li>Home</li>
+<li>About </li>
+<li>Contact Us</li>
+<li>Cart</li>
+</ul>
+ </div>
+</div>
+)
  
     
 
-}
 
-const applayout = () => (
+
+const Applayout = () => (
  
-<Header />
+<div className="app">
+<Header/>
+
+</div>
 
 )
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<Heading/>)
+root.render(<Applayout/>)

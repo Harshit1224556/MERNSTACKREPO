@@ -1,45 +1,43 @@
-MERN Stack Project 🚀
+Welcome to my repository where I document my journey of learning the MERN Stack (MongoDB, Express.js, React.js, Node.js).
+This repo contains my notes, mini-projects, and hands-on exercises as I explore full-stack web development.
 
-A full-stack JavaScript application built with the MERN (MongoDB, Express, React, Node.js) stack.
-This project demonstrates end-to-end web development, including frontend (React), backend (Node.js + Express), and database (MongoDB).
+📌 Tech Stack
 
-📌 Features
+Frontend: React.js, HTML5, CSS3, JavaScript, Tailwind CSS
 
-🌐 Full-Stack App – React frontend + Node/Express backend + MongoDB database
+Backend: Node.js, Express.js
 
-🔐 Authentication & Authorization – JWT-based login/signup
+Database: MongoDB
 
-🎨 Modern UI – Built with React, TailwindCSS/Bootstrap (choose what you used)
+Other Tools: Git, GitHub, Postman, VS Code
 
-⚡ REST API – CRUD operations with Express.js
+📚 Learning Goals
 
-📦 State Management – React Context API / Redux (mention what you used)
+✔ Understand the fundamentals of each MERN component
+✔ Build RESTful APIs using Express & Node
+✔ Learn MongoDB CRUD operations and Mongoose
+✔ Develop dynamic UIs with React
+✔ Connect frontend & backend seamlessly
+✔ Deploy MERN applications
 
-☁️ Database – MongoDB Atlas (cloud) / local MongoDB
+🛠 Projects & Progress
+✅ Basics
 
-🛠️ Tech Stack
-Frontend (React)
+ JavaScript Refresher
 
-React.js
+ Node.js Introduction
 
-React Router
+ Express.js Basics
 
-Axios / Fetch API
+ MongoDB CRUD Operations
 
-TailwindCSS / Bootstrap
+🎯 Full-Stack Projects
 
-Backend (Node.js + Express)
+ Todo List App
 
-Node.js
+ Authentication System (JWT, bcrypt, sessions)
 
-Express.js
+ Blog App (CRUD with database)
 
-JWT (JSON Web Tokens)
-
-Bcrypt.js (for password hashing)
-
-Database
-
-MongoDB / MongoDB Atlas
-
-Mongoose (ODM)
+ E-Commerce App
+ Dating App

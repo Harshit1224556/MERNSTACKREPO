@@ -2,6 +2,10 @@
   "name": "reactjs",
   "version": "1.0.0",
   "description": "this is my reactjsrepo",
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 21854ba79e95e8fcc0685b3a5d30348e01d6fd6e
   "scripts": {
     "test": "jest"
   },
@@ -22,10 +26,13 @@
   "homepage": "https://github.com/Harshit1224556/Projects#readme",
   "devDependencies": {
     "parcel": "^2.15.4"
+<<<<<<< HEAD
   },
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0"
+=======
+>>>>>>> 21854ba79e95e8fcc0685b3a5d30348e01d6fd6e
   }
 }

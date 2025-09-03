@@ -26,6 +26,7 @@ html,body{
     gap:20px;
 }
 
+<<<<<<< HEAD
 #restrauntcard{
     display: flex;
     flex-wrap: wrap;
@@ -33,10 +34,13 @@ html,body{
     align-items: center;
     padding-left: 6px;
 }
+=======
+>>>>>>> 21854ba79e95e8fcc0685b3a5d30348e01d6fd6e
 #rescard{
     width:300px;
     height: 300px;
     background-color: #D3D3D3;
+<<<<<<< HEAD
     /* border-radius: 35px; */
     border-radius: 10px;
 
@@ -58,28 +62,49 @@ html,body{
     /* border-radius: 10px; */
     padding: 10px 10px;
     padding-left: 18px;
+=======
+    border-radius: 35px;
+  
+}
+#food{
+
+    width: 300px;
+    height: 200px;
+    /* border-radius: 10px; */
+>>>>>>> 21854ba79e95e8fcc0685b3a5d30348e01d6fd6e
    
     
 }
 
+<<<<<<< HEAD
 
 #resname{
     font-family: Arial, Helvetica, sans-serif;
     font-size:25px;
     padding-left: 10px;
      
+=======
+#resname{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:25px;
+>>>>>>> 21854ba79e95e8fcc0685b3a5d30348e01d6fd6e
 }
 
 #ratandtime{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
+<<<<<<< HEAD
      padding-left: 18px;
+=======
+    
+>>>>>>> 21854ba79e95e8fcc0685b3a5d30348e01d6fd6e
 
 }
 
 p{
         font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
+<<<<<<< HEAD
       padding-left: 18px;
 
 }
@@ -114,3 +139,7 @@ p{
 #search-btn:hover {
   color: #000;
 }
+=======
+
+}
+>>>>>>> 21854ba79e95e8fcc0685b3a5d30348e01d6fd6e

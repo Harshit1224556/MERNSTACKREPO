@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { FaSearch } from "react-icons/fa";
 
 
 const Header = () => (
@@ -21,11 +22,14 @@ const Header = () => (
 </div>
 )
  
-const Restrocard = () =>(
+const Restrocard = (props) =>(
 
 <div id = "rescard">
+<div id = "imgdiv">
+
 <img src = "https://i.pinimg.com/736x/48/2a/57/482a5709b40093d1d5ffc035a5386f5e.jpg" id = "food"></img>
-<h1 id = "resname">Italian Restaurant </h1>
+</div>
+<h1 id = "resname">{props.resname}</h1>
 <h4 id = "ratandtime">4.4 . 40-50 mins</h4>
 <p>Pizzas</p>
 <p>North_Jalandhar</p>
@@ -33,13 +37,35 @@ const Restrocard = () =>(
 
 )
 
+const Search = () =>(
+
+<div id = "search">
+  <input type="text" placeholder="Type Here to Search" id  = "searchbar"/>
+    <button id = "search-btn">
+        <FaSearch />
+      </button>
+
+</div>
+
+)
 
     
 const Body = ()=>(
   
 <div id = "body">
-  <div id = "search">Search</div>
+  <div id = "search">
+    <Search />
+  </div>
   <div id = "restrauntcard">
+    <Restrocard resname = "Haldirams"/>
+    <Restrocard />
+    <Restrocard />
+    <Restrocard />
+    <Restrocard />
+    <Restrocard />
+    <Restrocard />
+    <Restrocard />
+    <Restrocard />
     <Restrocard />
   </div>
 
@@ -61,3 +87,18 @@ const Applayout = () => (
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(<Applayout/>)
+
+//we can pass aargument to the function 
+//as similar as we pass the prompts to componet
+//at the end props are object
+// so we have to just wrap this in the 
+//to made it a dynamic just wrap it in the javascript objects
+
+// as we see as we passed the props and we can pass the prompt to component  
+
+//using props.resname use {resname}
+//for that rather than using props we just dereference the operator
+//{resname,cusine}
+
+//congig driven ui 
+// in this  when all the ui is driven by config

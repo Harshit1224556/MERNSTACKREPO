@@ -26,36 +26,91 @@ html,body{
     gap:20px;
 }
 
+#restrauntcard{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2px;
+    align-items: center;
+    padding-left: 6px;
+}
 #rescard{
     width:300px;
     height: 300px;
     background-color: #D3D3D3;
-    border-radius: 35px;
+    /* border-radius: 35px; */
+    border-radius: 10px;
+
   
 }
-#food{
+#imgdiv{
 
     width: 300px;
     height: 200px;
+        border-radius: 10px;
     /* border-radius: 10px; */
    
     
 }
+#food{
+
+    width: 290px;
+    height: 200px;
+    /* border-radius: 10px; */
+    padding: 10px 10px;
+    padding-left: 18px;
+   
+    
+}
+
 
 #resname{
     font-family: Arial, Helvetica, sans-serif;
     font-size:25px;
+    padding-left: 10px;
+     
 }
 
 #ratandtime{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
-    
+     padding-left: 18px;
 
 }
 
 p{
         font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
+      padding-left: 18px;
 
+}
+#search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+  background: #fff;
+}
+
+#searchbar {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px 12px;
+}
+
+#search-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
+#search-btn:hover {
+  color: #000;
 }

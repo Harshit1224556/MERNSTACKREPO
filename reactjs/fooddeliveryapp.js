@@ -22,19 +22,24 @@ const Header = () => (
 </div>
 )
  
-const Restrocard = () =>(
+const Restrocard = ({resdata}) =>
+  
+  {
+  const   {name,cuisines,locality,cloudinaryImageId} = resdata?.info;
+  
+  return (
 
 <div id = "rescard">
-<img src = "https://i.pinimg.com/736x/48/2a/57/482a5709b40093d1d5ffc035a5386f5e.jpg" id = "food"></img>
-<h1 id = "resname">Italian Restaurant </h1>
+<img src = {"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_366/"  + cloudinaryImageId} id = "food"></img>
+<h1 id = "resname">{name}</h1>
 
 <h4 id = "ratandtime">4.4 . 40-50 mins</h4>
-<p>Pizzas</p>
-<p>North_Jalandhar</p>
+<p>{cuisines.join(",")}</p>
+<p>{locality}</p>
 </div>
 
 )
-
+  }
 
 const Search = () =>(
 
@@ -48,35 +53,855 @@ const Search = () =>(
 
 )
 
+const reslist = [
+   {
+                    "info": {
+                      "id": "645478",
+                      "name": "Subway",
+                      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/12/e4012b48-8006-4dc7-bfaa-e1ed13fdfa29_645478.jpg",
+                      "locality": "MODI BHAVAN",
+                      "areaName": "Gamdevi",
+                      "costForTwo": "₹350 for two",
+                      "cuisines": [
+                        "sandwich",
+                        "Salads",
+                        "wrap",
+                        "Healthy Food"
+                      ],
+                      "avgRating": 4.3,
+                      "parentId": "2",
+                      "avgRatingString": "4.3",
+                      "totalRatingsString": "5.4K+",
+                      "sla": {
+                        "deliveryTime": 22,
+                        "lastMileTravel": 1.6,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "20-25 mins",
+                        "lastMileTravelString": "1.6 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2025-09-05 03:00:00",
+                        "opened": true
+                      },
+                      "badges": {
+                        "imageBadges": [
+                          {
+                            "imageId": "android/static-assets/icons/big_rx.png",
+                            "description": "bolt!"
+                          }
+                        ]
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+                            "badgeObject": [
+                              {
+                                "attributes": {
+                                  "description": "bolt!",
+                                  "imageId": "android/static-assets/icons/big_rx.png"
+                                }
+                              }
+                            ]
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "ITEMS",
+                        "subHeader": "AT ₹69"
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "--"
+                        }
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-493964cf-6995-41b3-9c64-8c77a1b56adf"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/mumbai/subway-modi-bhavan-gamdevi-rest645478",
+                      "type": "WEBLINK"
+                    }
+                  },
+                  {
+                    "info": {
+                      "id": "338041",
+                      "name": "1441 Pizzeria",
+                      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/8/18/ec04e849-fe7d-489e-8a0e-3041088325bf_338041.JPG",
+                      "locality": "Kemps Corner",
+                      "areaName": "Kemps Corner",
+                      "costForTwo": "₹500 for two",
+                      "cuisines": [
+                        "Italian",
+                        "Pizzas",
+                        "Pastas"
+                      ],
+                      "avgRating": 4.2,
+                      "parentId": "2697",
+                      "avgRatingString": "4.2",
+                      "totalRatingsString": "3.6K+",
+                      "sla": {
+                        "deliveryTime": 33,
+                        "lastMileTravel": 2.4,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "30-35 mins",
+                        "lastMileTravelString": "2.4 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2025-09-05 04:00:00",
+                        "opened": true
+                      },
+                      "badges": {
+                        "imageBadges": [
+                          {
+                            "imageId": "newg.png",
+                            "description": "Gourmet"
+                          }
+                        ]
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+                            "badgeObject": [
+                              {
+                                "attributes": {
+                                  "description": "Gourmet",
+                                  "imageId": "newg.png"
+                                }
+                              }
+                            ]
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "60% OFF",
+                        "subHeader": "UPTO ₹120"
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "4.0",
+                          "ratingCount": "67"
+                        },
+                        "source": "GOOGLE",
+                        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-493964cf-6995-41b3-9c64-8c77a1b56adf"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/mumbai/1441-pizzeria-kemps-corner-rest338041",
+                      "type": "WEBLINK"
+                    }
+                  },
+                  {
+                    "info": {
+                      "id": "30183",
+                      "name": "Persian Darbar",
+                      "cloudinaryImageId": "7aeb2bbff29d99d6e986240911ce0e71",
+                      "locality": "Byculla",
+                      "areaName": "Byculla",
+                      "costForTwo": "₹500 for two",
+                      "cuisines": [
+                        "North Indian",
+                        "Biryani",
+                        "Mughlai",
+                        "Kebabs",
+                        "Seafood",
+                        "Chinese",
+                        "Desserts",
+                        "Beverages"
+                      ],
+                      "avgRating": 4.3,
+                      "parentId": "711",
+                      "avgRatingString": "4.3",
+                      "totalRatingsString": "36K+",
+                      "sla": {
+                        "deliveryTime": 28,
+                        "lastMileTravel": 2,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "25-30 mins",
+                        "lastMileTravelString": "2.0 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2025-09-05 05:00:00",
+                        "opened": true
+                      },
+                      "badges": {
+                        "imageBadges": [
+                          {
+                            "imageId": "android/static-assets/icons/big_rx.png",
+                            "description": "bolt!"
+                          },
+                          {
+                            "imageId": "newg.png",
+                            "description": "Gourmet"
+                          }
+                        ]
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+                            "badgeObject": [
+                              {
+                                "attributes": {
+                                  "description": "bolt!",
+                                  "imageId": "android/static-assets/icons/big_rx.png"
+                                }
+                              },
+                              {
+                                "attributes": {
+                                  "description": "Gourmet",
+                                  "imageId": "newg.png"
+                                }
+                              }
+                            ]
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "ITEMS",
+                        "subHeader": "AT ₹169"
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "4.2",
+                          "ratingCount": "13K+"
+                        },
+                        "source": "GOOGLE",
+                        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-493964cf-6995-41b3-9c64-8c77a1b56adf"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/mumbai/persian-darbar-byculla-rest30183",
+                      "type": "WEBLINK"
+                    }
+                  },
+                  {
+                    "info": {
+                      "id": "352502",
+                      "name": "Nino Burgers",
+                      "cloudinaryImageId": "9e9bd2c9ca7be7c08e88ccf1eeccfb1e",
+                      "locality": "Chowpatty",
+                      "areaName": "Chowpatty",
+                      "costForTwo": "₹500 for two",
+                      "cuisines": [
+                        "Burgers",
+                        "Fast Food",
+                        "American"
+                      ],
+                      "avgRating": 4.3,
+                      "parentId": "12333",
+                      "avgRatingString": "4.3",
+                      "totalRatingsString": "4.5K+",
+                      "sla": {
+                        "deliveryTime": 21,
+                        "lastMileTravel": 2.2,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "20-25 mins",
+                        "lastMileTravelString": "2.2 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2025-09-05 04:30:00",
+                        "opened": true
+                      },
+                      "badges": {
+                        "imageBadges": [
+                          {
+                            "imageId": "android/static-assets/icons/big_rx.png",
+                            "description": "bolt!"
+                          },
+                          {
+                            "imageId": "newg.png",
+                            "description": "Gourmet"
+                          }
+                        ]
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+                            "badgeObject": [
+                              {
+                                "attributes": {
+                                  "description": "bolt!",
+                                  "imageId": "android/static-assets/icons/big_rx.png"
+                                }
+                              },
+                              {
+                                "attributes": {
+                                  "description": "Gourmet",
+                                  "imageId": "newg.png"
+                                }
+                              }
+                            ]
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "₹125 OFF",
+                        "subHeader": "ABOVE ₹249",
+                        "discountTag": "FLAT DEAL"
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "4.3",
+                          "ratingCount": "54"
+                        },
+                        "source": "GOOGLE",
+                        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-493964cf-6995-41b3-9c64-8c77a1b56adf"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/mumbai/nino-burgers-chowpatty-rest352502",
+                      "type": "WEBLINK"
+                    }
+                  },
+                  {
+                    "info": {
+                      "id": "419319",
+                      "name": "The Dough Therapy",
+                      "cloudinaryImageId": "8eef058c1b4d15ebfd99cc296fe6c7ea",
+                      "locality": "Chowpatty",
+                      "areaName": "Chowpatty",
+                      "costForTwo": "₹800 for two",
+                      "cuisines": [
+                        "Pizzas",
+                        "Pastas",
+                        "Italian"
+                      ],
+                      "avgRating": 4.5,
+                      "parentId": "21911",
+                      "avgRatingString": "4.5",
+                      "totalRatingsString": "1.5K+",
+                      "sla": {
+                        "deliveryTime": 23,
+                        "lastMileTravel": 1.9,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "20-25 mins",
+                        "lastMileTravelString": "1.9 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2025-09-05 03:45:00",
+                        "opened": true
+                      },
+                      "badges": {
+                        "imageBadges": [
+                          {
+                            "imageId": "android/static-assets/icons/big_rx.png",
+                            "description": "bolt!"
+                          },
+                          {
+                            "imageId": "newg.png",
+                            "description": "Gourmet"
+                          }
+                        ]
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+                            "badgeObject": [
+                              {
+                                "attributes": {
+                                  "description": "bolt!",
+                                  "imageId": "android/static-assets/icons/big_rx.png"
+                                }
+                              },
+                              {
+                                "attributes": {
+                                  "description": "Gourmet",
+                                  "imageId": "newg.png"
+                                }
+                              }
+                            ]
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "₹125 OFF",
+                        "subHeader": "ABOVE ₹249",
+                        "discountTag": "FLAT DEAL"
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "4.2",
+                          "ratingCount": "46"
+                        },
+                        "source": "GOOGLE",
+                        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-493964cf-6995-41b3-9c64-8c77a1b56adf"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/mumbai/the-dough-therapy-chowpatty-rest419319",
+                      "type": "WEBLINK"
+                    }
+                  },
+                  {
+                    "info": {
+                      "id": "826700",
+                      "name": "Pastas By Pizza Hut",
+                      "cloudinaryImageId": "67d17abfeb3a5da6103b9424f6dbe973",
+                      "locality": "Saat Rasta Circle",
+                      "areaName": "Mahalaxmi Malabar Hill",
+                      "costForTwo": "₹400 for two",
+                      "cuisines": [
+                        "Pastas"
+                      ],
+                      "avgRating": 3.9,
+                      "parentId": "306806",
+                      "avgRatingString": "3.9",
+                      "totalRatingsString": "73",
+                      "sla": {
+                        "deliveryTime": 24,
+                        "lastMileTravel": 1.5,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "20-25 mins",
+                        "lastMileTravelString": "1.5 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2025-09-05 03:00:00",
+                        "opened": true
+                      },
+                      "badges": {
+                        "textExtendedBadges": [
+                          {
+                            "iconId": "guiltfree/GF_Logo_android_3x",
+                            "shortDescription": "options available",
+                            "fontColor": "#7E808C"
+                          }
+                        ]
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+                            "badgeObject": [
+                              {
+                                "attributes": {
+                                  "description": "",
+                                  "fontColor": "#7E808C",
+                                  "iconId": "guiltfree/GF_Logo_android_3x",
+                                  "shortDescription": "options available"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "40% OFF",
+                        "subHeader": "UPTO ₹80"
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "--"
+                        }
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-493964cf-6995-41b3-9c64-8c77a1b56adf"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/mumbai/pastas-by-pizza-hut-saat-rasta-circle-mahalaxmi-malabar-hill-rest826700",
+                      "type": "WEBLINK"
+                    }
+                  },
+                  {
+                    "info": {
+                      "id": "507006",
+                      "name": "McDonald's Gourmet Burger Collection",
+                      "cloudinaryImageId": "sk7nlrsnidywskyxoqvg",
+                      "locality": "Lower Parel Worli",
+                      "areaName": "Parel",
+                      "costForTwo": "₹400 for two",
+                      "cuisines": [
+                        "Burgers",
+                        "Beverages",
+                        "Cafe",
+                        "Desserts"
+                      ],
+                      "avgRating": 4.2,
+                      "parentId": "10761",
+                      "avgRatingString": "4.2",
+                      "totalRatingsString": "49",
+                      "sla": {
+                        "deliveryTime": 23,
+                        "lastMileTravel": 1.5,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "20-25 mins",
+                        "lastMileTravelString": "1.5 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2025-09-05 02:45:00",
+                        "opened": true
+                      },
+                      "badges": {
+                        "imageBadges": [
+                          {
+                            "imageId": "android/static-assets/icons/big_rx.png",
+                            "description": "bolt!"
+                          }
+                        ]
+                      },
+                      "isOpen": true,
+                      "aggregatedDiscountInfoV2": {
+
+                      },
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+                            "badgeObject": [
+                              {
+                                "attributes": {
+                                  "description": "bolt!",
+                                  "imageId": "android/static-assets/icons/big_rx.png"
+                                }
+                              }
+                            ]
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "--"
+                        }
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-493964cf-6995-41b3-9c64-8c77a1b56adf"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/mumbai/mcdonalds-gourmet-burger-collection-lower-worli-parel-rest507006",
+                      "type": "WEBLINK"
+                    }
+                  },
+                  {
+                    "info": {
+                      "id": "255316",
+                      "name": "Sbarro - New York Pizza",
+                      "cloudinaryImageId": "wiew83ypwhpjtrulwwqv",
+                      "locality": "Girgaum",
+                      "areaName": "Girgaon",
+                      "costForTwo": "₹300 for two",
+                      "cuisines": [
+                        "Pizzas",
+                        "Pastas",
+                        "Rolls & Wraps"
+                      ],
+                      "avgRating": 4.3,
+                      "parentId": "179343",
+                      "avgRatingString": "4.3",
+                      "totalRatingsString": "7.9K+",
+                      "sla": {
+                        "deliveryTime": 27,
+                        "lastMileTravel": 1.7,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "25-30 mins",
+                        "lastMileTravelString": "1.7 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2025-09-05 04:00:00",
+                        "opened": true
+                      },
+                      "badges": {
+                        "imageBadges": [
+                          {
+                            "imageId": "android/static-assets/icons/big_rx.png",
+                            "description": "bolt!"
+                          }
+                        ]
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+                            "badgeObject": [
+                              {
+                                "attributes": {
+                                  "description": "bolt!",
+                                  "imageId": "android/static-assets/icons/big_rx.png"
+                                }
+                              }
+                            ]
+                          },
+                          "textBased": {
+
+                          },
+                          "textExtendedBadges": {
+
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "ITEMS",
+                        "subHeader": "AT ₹99"
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "lottie": {
+
+                          },
+                          "video": {
+
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "4.0",
+                          "ratingCount": "315"
+                        },
+                        "source": "GOOGLE",
+                        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    },
+                    "analytics": {
+                      "context": "seo-data-493964cf-6995-41b3-9c64-8c77a1b56adf"
+                    },
+                    "cta": {
+                      "link": "https://www.swiggy.com/city/mumbai/sbarro-new-york-pizza-girgaum-girgaon-rest255316",
+                      "type": "WEBLINK"
+                    }
+                  }
+                ]
 
     
-const Body = ()=>(
-  
-<div id = "body">
+const Body = () => (
+  <div id="body">
 
-  <div id = "search">
-    <Search />
+    {/* Search Section */}
+    <div id="search">
+      <Search />
+    </div>
+
+    {/* Restaurant Cards Section */}
+    <div id="restrauntcard">
+    {
+  reslist.map((restaurant) => (
+    <Restrocard  key={restaurant.info.id} resdata={restaurant} />
+  ))
+}
+
+     
+     
+    </div>
+
   </div>
-  <div id = "restrauntcard">
-    <Restrocard resname = "Haldirams"/>
-    <Restrocard />
-    <Restrocard />
-    <Restrocard />
-    <Restrocard />
-    <Restrocard />
-    <Restrocard />
-    <Restrocard />
-    <Restrocard />
-  <div id = "search">Search</div>
-  <div id = "restrauntcard">
-
-    <Restrocard />
-  </div>
-
-</div>
-
-
 )
+
 
 
 const Applayout = () => (
@@ -92,7 +917,7 @@ const Applayout = () => (
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
 root.render(<Applayout/>)
-
+//when we have to pass dynamic data to the functional component we use props in the functional componenent
 //we can pass aargument to the function 
 //as similar as we pass the prompts to componet
 //at the end props are object
@@ -109,3 +934,4 @@ root.render(<Applayout/>)
 // in this  when all the ui is driven by config
 
 
+//not using key (not acceptable) => use index as a key = unique id

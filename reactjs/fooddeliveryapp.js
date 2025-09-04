@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-<<<<<<< HEAD
 import { FaSearch } from "react-icons/fa";
-=======
->>>>>>> 21854ba79e95e8fcc0685b3a5d30348e01d6fd6e
 
 
 const Header = () => (
@@ -25,22 +22,12 @@ const Header = () => (
 </div>
 )
  
-<<<<<<< HEAD
-const Restrocard = (props) =>(
-
-<div id = "rescard">
-<div id = "imgdiv">
-
-<img src = "https://i.pinimg.com/736x/48/2a/57/482a5709b40093d1d5ffc035a5386f5e.jpg" id = "food"></img>
-</div>
-<h1 id = "resname">{props.resname}</h1>
-=======
 const Restrocard = () =>(
 
 <div id = "rescard">
 <img src = "https://i.pinimg.com/736x/48/2a/57/482a5709b40093d1d5ffc035a5386f5e.jpg" id = "food"></img>
 <h1 id = "resname">Italian Restaurant </h1>
->>>>>>> 21854ba79e95e8fcc0685b3a5d30348e01d6fd6e
+
 <h4 id = "ratandtime">4.4 . 40-50 mins</h4>
 <p>Pizzas</p>
 <p>North_Jalandhar</p>
@@ -48,7 +35,7 @@ const Restrocard = () =>(
 
 )
 
-<<<<<<< HEAD
+
 const Search = () =>(
 
 <div id = "search">
@@ -60,14 +47,13 @@ const Search = () =>(
 </div>
 
 )
-=======
->>>>>>> 21854ba79e95e8fcc0685b3a5d30348e01d6fd6e
+
 
     
 const Body = ()=>(
   
 <div id = "body">
-<<<<<<< HEAD
+
   <div id = "search">
     <Search />
   </div>
@@ -81,10 +67,9 @@ const Body = ()=>(
     <Restrocard />
     <Restrocard />
     <Restrocard />
-=======
   <div id = "search">Search</div>
   <div id = "restrauntcard">
->>>>>>> 21854ba79e95e8fcc0685b3a5d30348e01d6fd6e
+
     <Restrocard />
   </div>
 
@@ -105,7 +90,7 @@ const Applayout = () => (
 )
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
-<<<<<<< HEAD
+
 root.render(<Applayout/>)
 
 //we can pass aargument to the function 
@@ -118,10 +103,9 @@ root.render(<Applayout/>)
 
 //using props.resname use {resname}
 //for that rather than using props we just dereference the operator
-//{resname,cusine}
+
 
 //congig driven ui 
 // in this  when all the ui is driven by config
-=======
-root.render(<Applayout/>)
->>>>>>> 21854ba79e95e8fcc0685b3a5d30348e01d6fd6e
+
+

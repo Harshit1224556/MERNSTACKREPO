@@ -40,3 +40,33 @@ html,body{
 #logos{
     border-radius: 60px;
 }
+
+#restrocard{
+  width:300px;
+  height: 300px;
+  background-color: lightcyan;
+  padding-left: 24px;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+#resname{
+  margin-top: 10x;
+}
+#resadd{
+  margin-top: 10px;
+}
+#price{
+  margin-top: 10px;
+}
+#rating{
+  margin-top: 10px;
+}
+
+#body{
+  display: flex;
+  gap:10px;
+}

@@ -43,6 +43,11 @@ const Body = () =>{
        <Restrocard />
        <Restrocard />
        <Restrocard />
+       <Restrocard />
+       <Restrocard />
+       <Restrocard />
+       
+      
        
     </div>
   )

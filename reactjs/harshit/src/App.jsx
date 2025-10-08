@@ -13,7 +13,16 @@ function App() {
   <>
    <Header />
    <Search />
+   <div className="cards-container">
+
    <Card />
+   <Card />
+   <Card />
+   <Card />
+   
+
+   </div>
+
    </>
  )
 }

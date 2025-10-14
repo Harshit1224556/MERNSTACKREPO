@@ -18,10 +18,11 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ]
 
-//   const hisbook  = books.filter( (br) => (br.genre==='History'))
-//   console.log(hisbook)
+  // const hisbook  = books.filter( (br) => (br.genre==='History'))
+  // console.log(hisbook)
 
-
+// const hisbook = books.filter( (br)=> (br.genre=='History'))
+// console.log(hisbook)
 // let  pubaf = books.filter(   (br) => (br.publish>=2000))
 // // console.log(pubaf)
 
@@ -40,13 +41,9 @@ const books = [
 
 
 //reduceeee
-
 //mostly used in to find the sum 
 //practical use to find total price  in  shopping cart
-
-
 // const arr = [1,2,3]
-
 // const newarr = arr.reduce( (acc,item) => acc + item,0)
 // console.log(newarr)
 
@@ -67,6 +64,12 @@ const shoppingcart = [
 
 ]
 
-const total = shoppingcart.reduce( (acc,item) => acc  + item.price,0)
+// const total = shoppingcart.reduce( (acc,item) => acc  + item.price,0)
 
-console.log(total)
+// console.log(total)
+
+
+
+const arr2 = ["sjj","ffffffffff","DDDDDDDDDDDDd"]
+const arr3 = ["SSSSSSSSSSSS","SSSSSSSSSSSSSSSSS","KKKKKKKKKKKKKKKKKKKKKKK"]
+console.log(arr2.concat(arr3))

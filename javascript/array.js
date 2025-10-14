@@ -68,3 +68,53 @@ const tv_hero = ["chutki","bhim","doremon"]
 // console.log(Array.of(sc1,sc2,sc3))
 
 //its make any from any variable
+
+// let arr = [1,2,3,4,5]
+// const el = arr.every((ec)=>(ec%2==0))
+// console.log(el)
+
+//its for checking any condition its help
+
+
+
+
+
+// let arr = [1,2,3,3,2,1]
+
+// let unqarr = [...new Set(arr)]
+// console.log(unqarr)
+
+
+
+
+
+
+// let numbers = [5,2,3,4,1]
+// let sec = numbers[0]
+
+// for(let num in numbers){
+//     if(num>sec) sec = num
+// }
+
+// console.log(sec)
+
+
+
+
+
+
+//how to sort the element in the array
+
+let numbers = [5,2,3,1,2]
+// numbers.sort()
+// console.log(numbers)
+
+//sort the number 
+
+//but if we want to sort the number in reverse order
+
+
+// numbers.sort((a,b)=>(b-a))
+// console.log(numbers)
+
+

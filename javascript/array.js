@@ -106,6 +106,12 @@ const tv_hero = ["chutki","bhim","doremon"]
 //how to sort the element in the array
 
 let numbers = [5,2,3,1,2]
+
+
+// const result = numbers.find((num)=>{
+//      return   num>1;
+// })
+// console.log(result)
 // numbers.sort()
 // console.log(numbers)
 
@@ -118,3 +124,24 @@ let numbers = [5,2,3,1,2]
 // console.log(numbers)
 
 
+// numbers.find((s)=>{
+
+// })
+
+
+// var  s = "harshit"
+// const arrs  = Array.from(s);
+// console.log(arrs)
+
+
+
+// let name = "my name is khan"
+// console.log(name.split(" "))
+
+
+let s = 0
+numbers.forEach((num)=>{
+    s = s + num;
+})
+
+console.log(s)

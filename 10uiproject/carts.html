@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Cards with Info</title>
+<style>
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: gray;
+        padding: 20px;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .cart {
+        width: 300px;
+        height: 350px;
+        border-radius: 10px;
+        border: 2px solid black;
+        display: none; 
+        background-size: cover;
+        background-position: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .cart.show {
+        display: block;
+       
+        opacity: 1;
+    }
+    
+
+    .cart:hover{
+        transform: translateY(-10px);
+    }
+    .info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.6);
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .info h3 {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .info p {
+        margin: 5px 0 0;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #007BFF;
+        color: white;
+        transition: background 0.3s;
+    }
+    
+   .heading {
+    position: fixed;      
+    top: 20px;            
+    left: 50%;            
+    transform: translateX(-50%); 
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    background-color: rgba(255,255,255,0.8); 
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    display: none;        
+    z-index: 1000;        
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<button id="btn">Click to see the cards below</button>
+
+<script>
+
+const btn = document.getElementById("btn");
+
+
+const cardsData = [
+    {img: "https://picsum.photos/300?random=1", title: "Card 1", desc: "This is the description for card 1."},
+    {img: "https://picsum.photos/300?random=2", title: "Card 2", desc: "This is the description for card 2."},
+    {img: "https://picsum.photos/300?random=3", title: "Card 3", desc: "This is the description for card 3."},
+    {img: "https://picsum.photos/300?random=4", title: "Card 4", desc: "This is the description for card 4."},
+    {img: "https://picsum.photos/300?random=5", title: "Card 5", desc: "This is the description for card 5."},
+];
+
+
+  const h1  = document.createElement("h1")
+    h1.classList.add("heading")
+    h1.innerHTML="this is the dyamic cart"
+     h1.classList.add("show")
+     document.body.appendChild(h1)
+
+cardsData.forEach((data) => {
+
+
+  
+    const cart = document.createElement("div");
+    cart.classList.add("cart");
+    cart.style.backgroundImage = `url(${data.img})`;
+    
+    
+    const infoDiv = document.createElement("div");
+    infoDiv.classList.add("info");
+    infoDiv.innerHTML = `<h3>${data.title}</h3><p>${data.desc}</p>`;
+
+    cart.appendChild(infoDiv);
+    document.body.appendChild(cart);
+});
+
+btn.addEventListener("click", () => {
+    const carts = document.querySelectorAll(".cart");
+    carts.forEach((cart) => {
+        cart.classList.add("show"); 
+    });
+    h1.style.display="block"
+    btn.style.display = "none"; 
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="" id = "bulb">
+<button id = "togglebutton">Turn ON</button>
+
+
+<script>
+
+    const bulb = document.getElementById("bulb")
+
+    const btn = document.getElementById("togglebutton")
+
+
+    let ison = false
+
+    btn.addEventListener("click",()=>{
+        if(ison){
+            bulb.src = "https://www.w3schools.com/js/pic_bulboff.gif"
+            ison = false
+            btn.innerText="Turn ON"
+        }
+
+        else{
+            bulb.src = "https://www.w3schools.com/js/pic_bulbon.gif"
+            ison = true
+            btn.innerHTML = "Turn OFF"
+        }
+    })
+    
+</script>
+</body>
+</html>

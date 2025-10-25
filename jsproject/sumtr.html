@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      width: 350px;
+      text-align: center;
+      color: #fff;
+      animation: fadeIn 0.8s ease;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .search {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 10px 0 0 10px;
+      width: 70%;
+      outline: none;
+      font-size: 14px;
+    }
+
+    button {
+      border: none;
+      background: #6dd5ed;
+      color: #fff;
+      border-radius: 0 10px 10px 0;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #2193b0;
+    }
+
+    .loading {
+      display: none;
+      font-weight: 500;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    .weather {
+      display: none;
+      margin-top: 20px;
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    img {
+      width: 100px;
+      margin: 10px 0;
+    }
+
+    .error {
+      color: #ff6b6b;
+      display: none;
+      margin-top: 10px;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .geo-btn {
+      margin-top: 15px;
+      background: #4facfe;
+      border: none;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .geo-btn:hover {
+      background: #00c6ff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>🌦️ Weather App</h2>
+
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Enter city name">
+      <button id="searchBtn">🔍</button>
+    </div>
+
+    <button class="geo-btn" id="geoBtn">📍 Use My Location</button>
+
+    <p class="loading">Fetching weather...</p>
+    <p class="error">❌ City not found or network error.</p>
+
+    <div class="weather">
+      <h3 id="cityName"></h3>
+      <img id="icon" src="" alt="Weather icon">
+      <h1 id="temp"></h1>
+      <p id="condition"></p>
+
+      <div class="details">
+        <div>
+          <p>💧 Humidity</p>
+          <h4 id="humidity"></h4>
+        </div>
+        <div>
+          <p>💨 Wind</p>
+          <h4 id="wind"></h4>
+        </div>
+        <div>
+          <p>🌡️ Feels Like</p>
+          <h4 id="feels"></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_KEY = "66e783ab39af4b319a5224716252802";
+    const searchBtn = document.getElementById("searchBtn");
+    const geoBtn = document.getElementById("geoBtn");
+    const cityInput = document.getElementById("cityInput");
+    const loadingText = document.querySelector(".loading");
+    const errorText = document.querySelector(".error");
+    const weatherBox = document.querySelector(".weather");
+
+    const cityName = document.getElementById("cityName");
+    const icon = document.getElementById("icon");
+    const temp = document.getElementById("temp");
+    const condition = document.getElementById("condition");
+    const humidity = document.getElementById("humidity");
+    const wind = document.getElementById("wind");
+    const feels = document.getElementById("feels");
+
+    async function getWeather(city) {
+      weatherBox.style.display = "none";
+      errorText.style.display = "none";
+      loadingText.style.display = "block";
+
+      try {
+        const res = await fetch(
+          `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`
+        );
+        const data = await res.json();
+
+        loadingText.style.display = "none";
+
+        if (data.error) {
+          errorText.style.display = "block";
+          return;
+        }
+
+        weatherBox.style.display = "block";
+        cityName.textContent = `${data.location.name}, ${data.location.country}`;
+        temp.textContent = `${data.current.temp_c}°C`;
+        condition.textContent = data.current.condition.text;
+        humidity.textContent = `${data.current.humidity}%`;
+        wind.textContent = `${data.current.wind_kph} km/h`;
+        feels.textContent = `${data.current.feelslike_c}°C`;
+        icon.src = `https:${data.current.condition.icon}`;
+      } catch {
+        loadingText.style.display = "none";
+        errorText.style.display = "block";
+      }
+    }
+
+    searchBtn.addEventListener("click", () => {
+      const city = cityInput.value.trim();
+      if (city) getWeather(city);
+    });
+
+    cityInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        const city = cityInput.value.trim();
+        if (city) getWeather(city);
+      }
+    });
+
+    // 🌍 Detect user's location
+    geoBtn.addEventListener("click", () => {
+      if (navigator.geolocation) {
+        loadingText.style.display = "block";
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            const lat = pos.coords.latitude;
+            const lon = pos.coords.longitude;
+            getWeather(`${lat},${lon}`);
+          },
+          () => {
+            loadingText.style.display = "none";
+            errorText.style.display = "block";
+            errorText.textContent = "❌ Location access denied.";
+          }
+        );
+      } else {
+        alert("Geolocation not supported in your browser.");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -99,3 +99,88 @@
 //tin baar hi print hoga wo tin baar k baad condition nh met kregaaaaaaaaaaa
 
 
+//create a function that exectues after n second indefinitly
+
+
+
+// function abcd(fn,n){
+//    setInterval(fn,1000)
+// }
+
+// abcd(function(){
+//     console.log("Hello Harshit")
+// },3000)
+
+
+
+
+// function greetkro(greeting){
+//      return function(name){
+//         console.log(`${greeting} ${name}`)
+//      }
+// }
+
+
+
+// var greeting = greetkro("Hello")
+// greeting("Harshit")
+// greeting("Harsh")
+
+// var spenchish = greetkro("Hola")
+// spenchish("Harshit")
+
+
+
+
+
+// function onolyfunc(cb){
+//     var iscall  = false;
+//     return function(){
+//     if(!iscall){
+//          iscall = true
+//          cb()
+//     }
+//     else{
+//         console.log("Already executed Once")
+//     }
+// }
+// }
+
+// let  onlyf =onolyfunc(function(){
+//     console.log("Hello")
+// })
+
+// onlyf()
+// onlyf()
+
+
+
+
+
+// function throat(fn,delay){
+
+//     let lastcount = 0
+//     return function(){
+//         let current = Date.now()
+//         if(current-lastcount>=delay){
+//             lastcount=current
+//             fn()
+//         }
+//     }
+// }
+
+// var newfn = throat(()=>{
+//     console.log("Hello World")
+// },2000)
+
+// newfn()
+// newfn()
+
+
+
+
+
+
+
+
+
